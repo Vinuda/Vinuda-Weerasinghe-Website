@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="img-src 'self' data: *;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vinuda Weerasinghe </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      @keyframes twinkle {
+          0%, 100% { opacity: 0.2; }
+          50% { opacity: 0.8; }
+      }
+      
+      @keyframes fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      @keyframes fade-out {
+          from { opacity: 1; }
+          to { opacity: 0; }
+      }
+
+      @keyframes pulse-glow {
+          0%, 100% { text-shadow: 0 0 5px rgba(224, 224, 224, 0.2), 0 0 10px rgba(224, 224, 224, 0.1); }
+          50% { text-shadow: 0 0 15px rgba(224, 224, 224, 0.5), 0 0 25px rgba(224, 224, 224, 0.3); }
+      }
+      
+      .animate-fade-in {
+          animation: fade-in 0.5s ease-in-out forwards;
+      }
+
+      .animate-fade-out {
+          animation: fade-out 0.5s ease-in-out forwards;
+      }
+
+      #stars1, #stars2, #stars3 {
+          position: absolute;
+          top: 0;
+          left: 0;
+          animation-name: twinkle;
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+      }
+
+      #stars1 {
+        width: 1px;
+        height: 1px;
+        background: transparent;
+        box-shadow: 1879px 1351px #FFF, 1289px 1828px #FFF, 153px 1083px #FFF, 1919px 666px #FFF, 1590px 1800px #FFF, 1524px 1479px #FFF, 1139px 1017px #FFF, 5px 1242px #FFF, 608px 233px #FFF, 1033px 119px #FFF, 1228px 1085px #FFF, 1849px 1735px #FFF, 1146px 1470px #FFF, 712px 1373px #FFF, 28px 113px #FFF, 1195px 683px #FFF, 1003px 186px #FFF, 1159px 1129px #FFF, 526px 872px #FFF, 611px 1120px #FFF, 897px 1332px #FFF, 842px 1003px #FFF, 1063px 1006px #FFF, 246px 1435px #FFF, 800px 1102px #FFF, 1373px 1729px #FFF, 722px 1279px #FFF, 1588px 953px #FFF, 1137px 116px #FFF, 1261px 1937px #FFF, 545px 1105px #FFF, 175px 1221px #FFF, 1403px 181px #FFF, 1024px 1711px #FFF, 1563px 1483px #FFF, 488px 1888px #FFF, 1399px 1646px #FFF, 1175px 1048px #FFF, 1324px 958px #FFF, 53px 179px #FFF, 480px 1805px #FFF, 1060px 122px #FFF, 1969px 717px #FFF, 1184px 1111px #FFF, 1085px 1705px #FFF, 802px 1983px #FFF, 172px 1010px #FFF, 1315px 1882px #FFF, 1051px 1583px #FFF;
+        animation-duration: 10s;
+      }
+      #stars2 {
+        width: 2px;
+        height: 2px;
+        background: transparent;
+        box-shadow: 111px 1503px #FFF, 185px 38px #FFF, 1782px 1056px #FFF, 1029px 1238px #FFF, 584px 1737px #FFF, 1330px 1115px #FFF, 1307px 1035px #FFF, 122px 1885px #FFF, 1237px 113px #FFF, 1130px 1123px #FFF, 100px 244px #FFF, 82px 1599px #FFF, 1420px 420px #FFF, 563px 100px #FFF, 439px 689px #FFF, 1561px 1758px #FFF, 107px 1414px #FFF, 290px 1074px #FFF, 1551px 534px #FFF, 622px 420px #FFF, 1110px 1928px #FFF, 1088px 137px #FFF, 1855px 1537px #FFF, 1515px 1102px #FFF, 1827px 1858px #FFF, 112px 1100px #FFF, 831px 486px #FFF, 157px 1445px #FFF, 298px 995px #FFF, 1892px 129px #FFF;
+        animation-duration: 12s;
+        animation-delay: -3s;
+      }
+      #stars3 {
+        width: 3px;
+        height: 3px;
+        background: transparent;
+        filter: blur(1px);
+        box-shadow: 376px 1428px #FFF, 1664px 85px #FFF, 843px 1935px #FFF, 144px 1102px #FFF, 1406px 126px #FFF, 1463px 1813px #FFF, 1709px 1563px #FFF, 401px 1010px #FFF, 856px 1053px #FFF, 1239px 1130px #FFF;
+        animation-duration: 15s;
+        animation-delay: -5s;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', 'serif'],
+              sans: ['"Cormorant Garamond"', 'serif'],
+            },
+            colors: {
+              'brand-dark': '#0a0a0a',
+              'brand-light': '#e0e0e0',
+              'brand-gray': '#888888',
+              'brand-border': '#444444',
+            },
+            animation: {
+              'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
